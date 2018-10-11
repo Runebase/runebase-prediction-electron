@@ -1,11 +1,11 @@
 [
   {
     "id": "tutorial2.content0",
-    "defaultMessage": "Assuming you have not used the Qtum Wallet client before, now that you have a brand new Qtum wallet, it is advised to take the proper steps to encrypt and back it up first."
+    "defaultMessage": "Assuming you have not used the Runebase Wallet client before, now that you have a brand new Runebase wallet, it is advised to take the proper steps to encrypt and back it up first."
   },
   {
     "id": "tutorial2.content1",
-    "defaultMessage": "To encrypt your wallet, select “Launch Qtum Wallet” in the application menu and follow the instructions here."
+    "defaultMessage": "To encrypt your wallet, select “Launch Runebase Wallet” in the application menu and follow the instructions here."
   },
   {
     "id": "tutorial2.content2",
@@ -13,7 +13,7 @@
   },
   {
     "id": "tutorial2.content3",
-    "defaultMessage": "The Qtum Wallet is responsible for holding your passphrase and private keys. Bodhi Dapp does not store or handle this for you."
+    "defaultMessage": "The Runebase Wallet is responsible for holding your passphrase and private keys. RunebasePrediction Dapp does not store or handle this for you."
   },
   {
     "id": "tutorial2.title",

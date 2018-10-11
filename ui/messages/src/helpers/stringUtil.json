@@ -4,8 +4,8 @@
     "defaultMessage": "Reset Approval"
   },
   {
-    "id": "tx.approveBotTransfer",
-    "defaultMessage": "Approve BOT Transfer"
+    "id": "tx.approvePredTransfer",
+    "defaultMessage": "Approve PRED Transfer"
   },
   {
     "id": "str.createEvent",

@@ -5,7 +5,7 @@
   },
   {
     "id": "encrypt.restart",
-    "defaultMessage": "You need to restart Bodhi applciation after successfully encrypt the wallet"
+    "defaultMessage": "You need to restart RunebasePrediction applciation after successfully encrypt the wallet"
   },
   {
     "id": "str.close",

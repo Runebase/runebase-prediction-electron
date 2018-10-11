@@ -5,7 +5,7 @@
   },
   {
     "id": "wallet.restoreWalletDescription",
-    "defaultMessage": "Please select Launch Qtum Wallet in the menu and restore your wallet in QT Wallet."
+    "defaultMessage": "Please select Launch Runebase Wallet in the menu and restore your wallet in QT Wallet."
   },
   {
     "id": "str.close",

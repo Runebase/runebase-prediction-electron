@@ -1,7 +1,7 @@
 [
   {
     "id": "withdrawDetail.youBetYouVote",
-    "defaultMessage": "You bet {qtum} QTUM. You voted {bot} BOT."
+    "defaultMessage": "You bet {runebase} RUNES. You voted {pred} PRED."
   },
   {
     "id": "topic.didNotBetOrVote",

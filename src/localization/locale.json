@@ -12,11 +12,11 @@
     "zh": "删除"
   },
   "deleteDataDialogTitle": {
-    "en": "Delete Bodhi data?",
+    "en": "Delete RunebasePrediction data?",
     "zh": "删除菩提数据"
   },
   "deleteDataDialogMessage": {
-    "en": "Deleting all Bodhi-related data will close the dapp. You will have to resync when you start Bodhi again. Are you sure?",
+    "en": "Deleting all RunebasePrediction-related data will close the dapp. You will have to resync when you start RunebasePrediction again. Are you sure?",
     "zh": "在关闭将这个应用的时候，删除所有与菩提相关的数据。当你打开菩提的时候,你必须再次同步这些数据。你确定吗？"
   },
   "enterYourWalletPassphrase": {
@@ -28,8 +28,8 @@
     "zh": "联系菩提"
   },
   "earlyAccessDialogMessage": {
-    "en": "Please email contact@bodhi.network for early access.",
-    "zh": "请联系 contact@bodhi.network 获取主链体验版"
+    "en": "Please email contact@runebaseprediction.network for early access.",
+    "zh": "请联系 contact@runebaseprediction.network 获取主链体验版"
   },
   "error": {
     "en": "Error",
@@ -40,7 +40,7 @@
     "zh": "关闭"
   },
   "shutdownDialogMessage": {
-    "en": "Bodhi will now shutdown. Please wait a little before shutting your computer off.",
+    "en": "RunebasePrediction will now shutdown. Please wait a little before shutting your computer off.",
     "zh": "菩提即将关闭。请在关闭您的电脑前等待一段时间。"
   },
   "functionDisabledUntilInitialized": {
@@ -63,12 +63,12 @@
     "en": "OK",
     "zh": "OK"
   },
-  "qtumWalletDialogTitle": {
-    "en": "Launch Qtum Wallet?",
+  "runebaseWalletDialogTitle": {
+    "en": "Launch Runebase Wallet?",
     "zh": "启动量子钱包?"
   },
-  "qtumWalletDialogMessage": {
-    "en": "You are about to launch the Qtum Wallet. Bodhi will need to be shutdown to run Qtum Wallet. To run Bodhi again, you will have to close the Qtum Wallet and run Bodhi again.\n\nBodhi will shutdown shortly. Are you sure to want to continue?",
+  "runebaseWalletDialogMessage": {
+    "en": "You are about to launch the Runebase Wallet. RunebasePrediction will need to be shutdown to run Runebase Wallet. To run RunebasePrediction again, you will have to close the Runebase Wallet and run RunebasePrediction again.\n\nRunebasePrediction will shutdown shortly. Are you sure to want to continue?",
     "zh": "菩提即将关闭已启动量子钱包。再次启动菩提前，请关闭量子钱包。\n\n菩提即将关闭，请确认是否继续"
   },
   "quit": {
@@ -79,8 +79,8 @@
     "en": "Retry",
     "zh": "重试"
   },
-  "selectQtumEnvironment": {
-    "en": "Select QTUM Environment",
+  "selectRunebaseEnvironment": {
+    "en": "Select RUNEBASE Environment",
     "zh": "选择量子链网路"
   },
   "testnet": {

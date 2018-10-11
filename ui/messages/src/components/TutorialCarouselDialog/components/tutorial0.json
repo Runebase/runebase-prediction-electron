@@ -1,7 +1,7 @@
 [
   {
     "id": "tutorial0.content0",
-    "defaultMessage": "Bodhi Dapp is a free, open-source, client-side interface."
+    "defaultMessage": "RunebasePrediction Dapp is a free, open-source, client-side interface."
   },
   {
     "id": "tutorial0.content1",
@@ -9,7 +9,7 @@
   },
   {
     "id": "tutorial0.content2",
-    "defaultMessage": "Bodhi Dapp is NOT a standalone wallet. We use the Qtum Core Wallet to handle all transactions and interactions with the Qtum blockchain."
+    "defaultMessage": "RunebasePrediction Dapp is NOT a standalone wallet. We use the Runebase Core Wallet to handle all transactions and interactions with the Runebase blockchain."
   },
   {
     "id": "tutorial0.content3",
@@ -17,6 +17,6 @@
   },
   {
     "id": "tutorial0.title",
-    "defaultMessage": "What Is The Bodhi App"
+    "defaultMessage": "What Is The RunebasePrediction App"
   }
 ]

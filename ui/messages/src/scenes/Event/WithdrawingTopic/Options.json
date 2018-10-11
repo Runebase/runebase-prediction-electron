@@ -1,10 +1,10 @@
 [
   {
     "id": "withdrawDetail.totalBetTotalVote",
-    "defaultMessage": "Total bet amount {qtum} QTUM. Total voted amount {bot} BOT."
+    "defaultMessage": "Total bet amount {runebase} RUNES. Total voted amount {pred} PRED."
   },
   {
     "id": "withdrawDetail.youBetYouVote",
-    "defaultMessage": "You bet {qtum} QTUM. You voted {bot} BOT."
+    "defaultMessage": "You bet {runebase} RUNES. You voted {pred} PRED."
   }
 ]

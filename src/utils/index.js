@@ -1,11 +1,11 @@
 const _ = require('lodash');
-const { Utils } = require('bodhi-server');
+const { Utils } = require('runebase-prediction-server');
 
 /*
-* Gets the prod env qtum exec path.
+* Gets the prod env runebase exec path.
 * return {String} The full prod path for the exec file.
 */
-const getProdQtumExecPath = () => {
+const getProdRunebaseExecPath = () => {
   const platform = process.platform;
   const arch = process.arch;
   let osFolder;
@@ -35,27 +35,27 @@ const getProdQtumExecPath = () => {
   }
 
   const { app } = require('electron'); // eslint-disable-line global-require
-  const path = `${app.getAppPath()}/node_modules/bodhi-server/qtum/${osFolder}/bin`;
+  const path = `${app.getAppPath()}/node_modules/runebase-prediction-server/runebase/${osFolder}/bin`;
   return path.replace('app.asar', 'app.asar.unpacked');
 };
 
 /*
-* Returns the path for the Qtum binaries folder.
+* Returns the path for the Runebase binaries folder.
 */
-const getQtumExecPath = () => {
-  let qtumExecPath;
+const getRunebaseExecPath = () => {
+  let runebaseExecPath;
   if (Utils.isDevEnv()) {
-    qtumExecPath = Utils.getDevQtumExecPath();
+    runebaseExecPath = Utils.getDevRunebaseExecPath();
   } else {
-    qtumExecPath = getProdQtumExecPath();
+    runebaseExecPath = getProdRunebaseExecPath();
   }
 
-  if (_.isEmpty(qtumExecPath)) {
-    throw Error('qtumExecPath cannot be empty.');
+  if (_.isEmpty(runebaseExecPath)) {
+    throw Error('runebaseExecPath cannot be empty.');
   }
-  return qtumExecPath;
+  return runebaseExecPath;
 };
 
 module.exports = {
-  getQtumExecPath,
+  getRunebaseExecPath,
 };

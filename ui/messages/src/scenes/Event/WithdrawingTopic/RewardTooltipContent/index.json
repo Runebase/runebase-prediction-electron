@@ -8,11 +8,11 @@
     "defaultMessage": "Total {token} Profit"
   },
   {
-    "id": "tooltip.qtumWon",
+    "id": "tooltip.runebaseWon",
     "defaultMessage": "{token} Won"
   },
   {
-    "id": "tooltip.botQtumWon",
+    "id": "tooltip.predRunebaseWon",
     "defaultMessage": "{token} Reward"
   },
   {

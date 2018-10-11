@@ -4,10 +4,6 @@
     "defaultMessage": "All Events"
   },
   {
-    "id": "navBar.settings",
-    "defaultMessage": "Settings"
-  },
-  {
     "id": "help",
     "defaultMessage": "Help"
   },
@@ -16,11 +12,11 @@
     "defaultMessage": "My Activities"
   },
   {
-    "id": "navbar.qtumPrediction",
-    "defaultMessage": "QTUM Prediction"
+    "id": "navbar.runebasePrediction",
+    "defaultMessage": "RUNEBASE Prediction"
   },
   {
-    "id": "navbar.botCourt",
-    "defaultMessage": "BOT Court"
+    "id": "navbar.predCourt",
+    "defaultMessage": "PRED Court"
   }
 ]

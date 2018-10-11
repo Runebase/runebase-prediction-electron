@@ -5,18 +5,18 @@ const axios = require('axios');
 const express = require('express');
 const path = require('path');
 const os = require('os');
-const { BodhiServer, BodhiConfig, BodhiDb, Constants, EmitterHelper, getLogger, Wallet } = require('bodhi-server');
+const { RunebasePredictionServer, RunebasePredictionConfig, RunebasePredictionDb, Constants, EmitterHelper, getLogger, Wallet } = require('runebase-prediction-server');
 
 const { version, testnetOnly, encryptOk } = require('./package.json');
 const Tracking = require('./src/analytics/tracking');
-const { getQtumExecPath } = require('./src/utils');
+const { getRunebaseExecPath } = require('./src/utils');
 
 /*
 * Order of Operations
 * 1. Show select env dialog
-* 2. Set qtum env
+* 2. Set runebase env
 * 3. Init DB
-* 4. Start qtumd & start loading window
+* 4. Start runebased & start loading window
 * 5. Check wallet encryption
 * 6. Show wallet unlock dialog if necessary
 * 7. Start sync/API
@@ -24,13 +24,13 @@ const { getQtumExecPath } = require('./src/utils');
 */
 
 const UI_PORT = 3000;
-const EXPLORER_URL_PLACEHOLDER = 'https://qtumhost';
+const EXPLORER_URL_PLACEHOLDER = 'https://runebasehost';
 const { blockchainEnv, ipcEvent, execFile } = Constants;
 
 /*
-* Codes for type of event when killing the Qtum process
+* Codes for type of event when killing the Runebase process
 * NORMAL = regular shutdown
-* QT_WALLET = shutdown qtumd before starting QT wallet
+* QT_WALLET = shutdown runebased before starting QT wallet
 */
 const [NORMAL, QT_WALLET] = [0, 1];
 
@@ -40,10 +40,10 @@ let uiWin;
 let i18n;
 let killType;
 
-function killQtum(type) {
+function killRunebase(type) {
   try {
     killType = type;
-    BodhiServer.killQtumProcess(true);
+    RunebasePredictionServer.killRunebaseProcess(true);
   } catch (err) {
     app.quit();
   }
@@ -73,7 +73,7 @@ function createWindow() {
 
     let formattedUrl = url;
     if (url.includes(EXPLORER_URL_PLACEHOLDER)) {
-      formattedUrl = url.replace(EXPLORER_URL_PLACEHOLDER, BodhiConfig.getQtumExplorerUrl());
+      formattedUrl = url.replace(EXPLORER_URL_PLACEHOLDER, RunebasePredictionConfig.getRunebaseExplorerUrl());
     }
     shell.openExternal(formattedUrl);
   });
@@ -86,21 +86,21 @@ function createWindow() {
   uiWin.loadURL(`file://${__dirname}/ui/html/loading/index.html`);
 }
 
-function showLaunchQtumWalletDialog() {
+function showLaunchRunebaseWalletDialog() {
   app.focus();
 
   const [CANCEL, LAUNCH] = [0, 1];
   dialog.showMessageBox({
     type: 'question',
     buttons: [i18n.get('cancel'), i18n.get('launch')],
-    title: i18n.get('qtumWalletDialogTitle'),
-    message: i18n.get('qtumWalletDialogMessage'),
+    title: i18n.get('runebaseWalletDialogTitle'),
+    message: i18n.get('runebaseWalletDialogMessage'),
     defaultId: CANCEL,
     cancelId: CANCEL,
   }, (response) => {
     if (response === LAUNCH) {
-      if (BodhiServer.getQtumProcess()) {
-        killQtum(QT_WALLET);
+      if (RunebasePredictionServer.getRunebaseProcess()) {
+        killRunebase(QT_WALLET);
       } else {
         // Show dialog to wait for initializing to finish
         dialog.showMessageBox({
@@ -127,7 +127,7 @@ function showDeleteDataDialog() {
     cancelId: CANCEL,
   }, (response) => {
     if (response === DELETE) {
-      BodhiDb.deleteBodhiData();
+      RunebasePredictionDb.deleteRunebasePredictionData();
       app.quit();
     }
   });
@@ -148,8 +148,8 @@ function setupMenu() {
     {
       label: "Application",
       submenu: [
-        { label: "Launch Qtum Wallet", click: () => showLaunchQtumWalletDialog() },
-        { label: "Delete Bodhi Data", click: () => showDeleteDataDialog() },
+        { label: "Launch Runebase Wallet", click: () => showLaunchRunebaseWalletDialog() },
+        { label: "Delete RunebasePrediction Data", click: () => showDeleteDataDialog() },
         { type: "separator" },
         { label: "About", click: () => showAboutDialog() },
         { type: "separator" },
@@ -212,7 +212,7 @@ async function startBackend(blockchainEnv) {
     throw Error(`blockchainEnv cannot be empty.`);
   }
 
-  await BodhiServer.startServer(blockchainEnv, getQtumExecPath(), encryptOk);
+  await RunebasePredictionServer.startServer(blockchainEnv, getRunebaseExecPath(), encryptOk);
   initBrowserWindow();
 }
 
@@ -231,7 +231,7 @@ function showUpdateDialog() {
     if (response === CANCEL) {
       showSelectEnvDialog();
     } else {
-      shell.openExternal('https://bodhi.network');
+      shell.openExternal('https://www.runebase.io');
       app.quit();
     }
   });
@@ -240,7 +240,7 @@ function showUpdateDialog() {
 // Check latest Github version to see if they should show the update dialog
 async function checkLatestVersion() {
   try {
-    const res = await axios.get('https://api.github.com/repos/bodhiproject/bodhi-app/releases');
+    const res = await axios.get('https://api.github.com/repos/runebase/runebase-prediction-app/releases');
     if (!_.isEmpty(res)) {
       // Parse package.json version
       const regex = RegExp(/(\d+.\d+.\d+)-(c\d+)-(d\d+)/g);
@@ -274,8 +274,8 @@ function showSelectEnvDialog() {
   dialog.showMessageBox({
     type: 'question',
     buttons: [i18n.get('mainnet'), i18n.get('testnet'), i18n.get('quit')],
-    title: i18n.get('selectQtumEnvironment'),
-    message: i18n.get('selectQtumEnvironment'),
+    title: i18n.get('selectRunebaseEnvironment'),
+    message: i18n.get('selectRunebaseEnvironment'),
     defaultId: QUIT,
     cancelId: QUIT,
   }, (response) => {
@@ -362,11 +362,11 @@ function showWalletUnlockPrompt() {
       }
 
       // Unlock wallet
-      await Wallet.walletPassphrase({ passphrase: res, timeout: BodhiConfig.Config.UNLOCK_SECONDS });
+      await Wallet.walletPassphrase({ passphrase: res, timeout: RunebasePredictionConfig.Config.UNLOCK_SECONDS });
       const info = await Wallet.getWalletInfo();
       if (info.unlocked_until > 0) {
         getLogger().info('Wallet unlocked');
-        BodhiServer.startServices();
+        RunebasePredictionServer.startServices();
       } else {
         getLogger().error('Wallet unlock failed');
         throw Error(i18n.get('walletUnlockFailed'));
@@ -379,7 +379,7 @@ function showWalletUnlockPrompt() {
 }
 
 function startQtWallet() {
-  setTimeout(() => require('bodhi-server').BodhiServer.startQtumWallet(), 4000);
+  setTimeout(() => require('runebase-prediction-server').RunebasePredictionServer.startRunebaseWallet(), 4000);
 }
 
 function handleExitSignal(signal) {
@@ -431,14 +431,14 @@ app.on('will-quit', (event) => {
   console.log('will-quit');
   event.preventDefault();
 
-  if (BodhiServer.getQtumProcess()) {
+  if (RunebasePredictionServer.getRunebaseProcess()) {
     dialog.showMessageBox({
       type: 'info',
       title: i18n.get('shutdownDialogTitle'),
       message: i18n.get('shutdownDialogMessage'),
       buttons: [i18n.get('ok')],
     }, () => {
-      killQtum(NORMAL);
+      killRunebase(NORMAL);
     });
   } else {
     app.exit();
@@ -451,13 +451,13 @@ EmitterHelper.emitter.on(ipcEvent.SERVER_START_ERROR, (errMessage) => {
   showErrorDialog(errMessage);
 });
 
-// Show error dialog for any qtumd start errors
-EmitterHelper.emitter.on(ipcEvent.QTUMD_ERROR, (errMessage) => {
+// Show error dialog for any runebased start errors
+EmitterHelper.emitter.on(ipcEvent.RUNEBASED_ERROR, (errMessage) => {
   showErrorDialog(errMessage);
 });
 
-// Delay, then start qtum-qt
-EmitterHelper.emitter.on(ipcEvent.QTUMD_KILLED, () => {
+// Delay, then start runebase-qt
+EmitterHelper.emitter.on(ipcEvent.RUNEBASED_KILLED, () => {
   switch (killType) {
     case NORMAL: {
       app.exit();
@@ -494,7 +494,7 @@ EmitterHelper.emitter.on(ipcEvent.WALLET_BACKUP, (event) => {
   dialog.showSaveDialog(options, async (path) => {
     try {
       if (!_.isUndefined(path)) {
-        await require('bodhi-server').Wallet.backupWallet({ destination: path });
+        await require('runebase-prediction-server').Wallet.backupWallet({ destination: path });
         const options = {
           type: 'info',
           title: 'Information',
@@ -522,7 +522,7 @@ EmitterHelper.emitter.on(ipcEvent.WALLET_IMPORT, (event) => {
   }, async (files) => {
     try {
       if (!_.isEmpty(files)) {
-        await require('bodhi-server').Wallet.importWallet({ filename: files[0] });
+        await require('runebase-prediction-server').Wallet.importWallet({ filename: files[0] });
 
         dialog.showMessageBox({
           type: 'info',

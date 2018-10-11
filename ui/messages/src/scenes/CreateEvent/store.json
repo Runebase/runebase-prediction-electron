@@ -16,8 +16,8 @@
     "defaultMessage": "Must be at least 30 minutes after Result Setting Start Time"
   },
   {
-    "id": "str.notEnoughBot",
-    "defaultMessage": "You don't have enough BOT"
+    "id": "str.notEnoughPred",
+    "defaultMessage": "You don't have enough PRED"
   },
   {
     "id": "create.required",

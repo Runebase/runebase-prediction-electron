@@ -1,9 +1,9 @@
 const Mixpanel = require('mixpanel');
 const _ = require('lodash');
 const os = require('os');
-const { Utils } = require('bodhi-server');
+const { Utils } = require('runebase-prediction-server');
 
-const MIXPANEL_TOKEN = '5c13e6b02fc222c0adae2f1f8cd923b0';
+const MIXPANEL_TOKEN = '8ca400334e04c69fa1c47187a4be3074';
 
 let mixpanel;
 

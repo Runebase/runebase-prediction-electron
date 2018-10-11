@@ -1,14 +1,14 @@
 {
-  "name": "Bodhi",
-  "description": "Bodhi Prediction Market app",
+  "name": "RunebasePrediction",
+  "description": "RunebasePrediction Prediction Market app",
   "author": "bodhi.network",
   "license": "ISC",
   "version": "0.9.0-c0-d3",
-  "repository": "git@github.com:bodhiproject/bodhi-graphql.git",
+  "repository": "git@github.com:runebase/runebase-prediction-electron.git",
   "main": "main.js",
   "keywords": [
-    "qtum",
-    "bodhi",
+    "runebase",
+    "runebaseprediction",
     "api",
     "graphql"
   ],
@@ -25,21 +25,21 @@
     "lint:fix": "eslint --fix -- src/."
   },
   "build": {
-    "appId": "network.bodhi.app",
-    "productName": "Bodhi",
+    "appId": "network.runebaseprediction.app",
+    "productName": "Runebase-Prediction",
     "mac": {
       "asar": true,
-      "asarUnpack": "server/qtum/mac/bin/*",
+      "asarUnpack": "server/runebase/mac/bin/*",
       "category": "public.app-category.utilities",
       "files": [
         {
           "filter": [
             "**/*",
             "build/icon.png",
-            "!server/qtum/linux32",
-            "!server/qtum/linux64",
-            "!server/qtum/win32",
-            "!server/qtum/win64"
+            "!server/runebase/linux32",
+            "!server/runebase/linux64",
+            "!server/runebase/win32",
+            "!server/runebase/win64"
           ]
         }
       ],
@@ -51,20 +51,20 @@
       "oneClick": false
     },
     "win": {
-      "artifactName": "Bodhi-Setup-${version}.${ext}",
+      "artifactName": "RunebasePrediction-Setup-${version}.${ext}",
       "asar": true,
       "asarUnpack": [
-        "server/qtum/win64/bin/*",
-        "server/qtum/win32/bin/*"
+        "server/runebase/win64/bin/*",
+        "server/runebase/win32/bin/*"
       ],
       "files": [
         {
           "filter": [
             "**/*",
             "build/icon.ico",
-            "!server/qtum/linux32",
-            "!server/qtum/linux64",
-            "!server/qtum/mac"
+            "!server/runebase/linux32",
+            "!server/runebase/linux64",
+            "!server/runebase/mac"
           ]
         }
       ],
@@ -82,8 +82,8 @@
     "linux": {
       "asar": true,
       "asarUnpack": [
-        "server/qtum/linux64/bin/*",
-        "server/qtum/linux32/bin/*"
+        "server/runebase/linux64/bin/*",
+        "server/runebase/linux32/bin/*"
       ],
       "category": "Utility",
       "files": [
@@ -91,9 +91,9 @@
           "filter": [
             "**/*",
             "build/icon.png",
-            "!server/qtum/mac",
-            "!server/qtum/win32",
-            "!server/qtum/win64"
+            "!server/runebase/mac",
+            "!server/runebase/win32",
+            "!server/runebase/win64"
           ]
         }
       ],
@@ -111,7 +111,7 @@
   },
   "dependencies": {
     "axios": "^0.18.0",
-    "bodhi-server": "^0.9.0-c0-d3",
+    "runebase-prediction-server": "github:runebase/runebase-prediction-server#v1.0.1",
     "electron-prompt": "^0.5.0",
     "express": "^4.16.3",
     "lodash": "^4.17.10",
