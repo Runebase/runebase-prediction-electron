@@ -1,7 +1,7 @@
 [
   {
     "id": "depositDialog.title",
-    "defaultMessage": "RUNES/PRED Deposit Address"
+    "defaultMessage": "RUNEBASE/PRED Deposit Address"
   },
   {
     "id": "str.close",

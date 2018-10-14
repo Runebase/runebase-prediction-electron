@@ -118,8 +118,8 @@
     "mixpanel": "^0.9.2"
   },
   "devDependencies": {
-    "electron": "^2.0.2",
-    "electron-builder": "^20.15.1",
+    "electron": "^3.0.4",
+    "electron-builder": "^20.28.4",
     "eslint": "^4.16.0",
     "eslint-config-airbnb": "^16.1.0",
     "eslint-plugin-import": "^2.12.0",

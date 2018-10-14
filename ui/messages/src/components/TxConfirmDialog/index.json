@@ -5,7 +5,7 @@
   },
   {
     "id": "txConfirm.messageWithFee",
-    "defaultMessage": "You are about to {txDesc} for {txAmount} {txToken} with a maximum transaction fee of {txFee} RUNES. Any unused transaction fees will be refunded to you. Please click OK to continue."
+    "defaultMessage": "You are about to {txDesc} for {txAmount} {txToken} with a maximum transaction fee of {txFee} RUNEBASE. Any unused transaction fees will be refunded to you. Please click OK to continue."
   },
   {
     "id": "str.type",
@@ -17,7 +17,7 @@
   },
   {
     "id": "str.fee",
-    "defaultMessage": "Gas Fee (RUNES)"
+    "defaultMessage": "Gas Fee (RUNEBASE)"
   },
   {
     "id": "str.gasLimit",

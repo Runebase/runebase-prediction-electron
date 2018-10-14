@@ -9,7 +9,7 @@
   },
   {
     "id": "tnc.general1",
-    "defaultMessage": "The Site is operated by the RunebasePrediction Foundation (“RunebasePrediction“). At this stage of the Platform development this Site is entirely for free, and no risking of any PRED or RUNES Tokens is required in order to use it. Therefore, all Events and/or Predictions made via the Site are entirely risk free, however this is subject to change in accordance with the development milestones."
+    "defaultMessage": "The Site is operated by the RunebasePrediction Foundation (“RunebasePrediction“). At this stage of the Platform development this Site is entirely for free, and no risking of any PRED or RUNEBASE Tokens is required in order to use it. Therefore, all Events and/or Predictions made via the Site are entirely risk free, however this is subject to change in accordance with the development milestones."
   },
   {
     "id": "tnc.general2",
@@ -121,7 +121,7 @@
   },
   {
     "id": "tnc.powers2",
-    "defaultMessage": "RunebasePrediction reserves the right to cancel, terminate, modify or suspend the Site and/or Platform if for any reason, the Site and/or Platform cannot be operated as planned, including, but not limited to, infection by computer virus, bugs, tampering or unauthorized intervention, fraud, technical failures as well as any other causes beyond RunebasePrediction’s control. If any errors result in awarding RUNES or PRED (“tokens”) to You or in an increase in tokens paid to You, You shall not be entitled to these tokens. You agree to immediately inform RunebasePrediction of the error and shall repay any tokens credited to You in error to RunebasePrediction (as directed by RunebasePrediction) or RunebasePrediction may, at its discretion, set off such amount against any tokens owed to You."
+    "defaultMessage": "RunebasePrediction reserves the right to cancel, terminate, modify or suspend the Site and/or Platform if for any reason, the Site and/or Platform cannot be operated as planned, including, but not limited to, infection by computer virus, bugs, tampering or unauthorized intervention, fraud, technical failures as well as any other causes beyond RunebasePrediction’s control. If any errors result in awarding RUNEBASE or PRED (“tokens”) to You or in an increase in tokens paid to You, You shall not be entitled to these tokens. You agree to immediately inform RunebasePrediction of the error and shall repay any tokens credited to You in error to RunebasePrediction (as directed by RunebasePrediction) or RunebasePrediction may, at its discretion, set off such amount against any tokens owed to You."
   },
   {
     "id": "tnc.powers3",
