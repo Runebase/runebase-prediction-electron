@@ -1,0 +1,38 @@
+[
+  {
+    "id": "redeemConfirm.message",
+    "defaultMessage": "You are about to {txDesc} for {txAmount} {txToken}. Please click OK to continue."
+  },
+  {
+    "id": "redeemConfirm.messageWithFee",
+    "defaultMessage": "You are about to {txDesc} for {txAmount} {txToken} with a maximum transaction fee of {txFee} RUNES. Any unused transaction fees will be refunded to you. Please click OK to continue."
+  },
+  {
+    "id": "str.type",
+    "defaultMessage": "Type"
+  },
+  {
+    "id": "str.amount",
+    "defaultMessage": "Amount"
+  },
+  {
+    "id": "str.fee",
+    "defaultMessage": "Gas Fee (RUNES)"
+  },
+  {
+    "id": "str.gasLimit",
+    "defaultMessage": "Gas Limit"
+  },
+  {
+    "id": "redeemConfirm.title",
+    "defaultMessage": "Please Confirm Your Withdrawal"
+  },
+  {
+    "id": "str.cancel",
+    "defaultMessage": "Cancel"
+  },
+  {
+    "id": "str.confirm",
+    "defaultMessage": "OK"
+  }
+]

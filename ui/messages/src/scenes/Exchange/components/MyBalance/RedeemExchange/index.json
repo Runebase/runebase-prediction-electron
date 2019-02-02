@@ -1,0 +1,6 @@
+[
+  {
+    "id": "redeemConfirmMsg.send",
+    "defaultMessage": "send to address {address}"
+  }
+]

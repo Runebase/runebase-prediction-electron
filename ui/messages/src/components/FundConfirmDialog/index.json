@@ -1,0 +1,38 @@
+[
+  {
+    "id": "txConfirm.message",
+    "defaultMessage": "You are about to {txDesc} for {txAmount} {txToken}. Please click OK to continue."
+  },
+  {
+    "id": "txConfirm.messageWithFee",
+    "defaultMessage": "You are about to {txDesc} for {txAmount} {txToken} with a maximum transaction fee of {txFee} RUNES. Any unused transaction fees will be refunded to you. Please click OK to continue."
+  },
+  {
+    "id": "str.type",
+    "defaultMessage": "Type"
+  },
+  {
+    "id": "str.amount",
+    "defaultMessage": "Amount"
+  },
+  {
+    "id": "str.fee",
+    "defaultMessage": "Gas Fee (RUNES)"
+  },
+  {
+    "id": "str.gasLimit",
+    "defaultMessage": "Gas Limit"
+  },
+  {
+    "id": "txConfirm.title",
+    "defaultMessage": "Please Confirm Your Transaction"
+  },
+  {
+    "id": "str.cancel",
+    "defaultMessage": "Cancel"
+  },
+  {
+    "id": "str.confirm",
+    "defaultMessage": "OK"
+  }
+]

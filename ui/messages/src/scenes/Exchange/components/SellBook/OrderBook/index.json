@@ -1,0 +1,6 @@
+[
+  {
+    "id": "executeOrderConfirmMsg.send",
+    "defaultMessage": "send to address {address}"
+  }
+]

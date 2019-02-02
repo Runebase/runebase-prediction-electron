@@ -18,5 +18,9 @@
   {
     "id": "navbar.predCourt",
     "defaultMessage": "PRED Court"
+  },
+  {
+    "id": "navbar.exchange",
+    "defaultMessage": "Exchange"
   }
 ]

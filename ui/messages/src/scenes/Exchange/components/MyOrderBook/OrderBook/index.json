@@ -1,0 +1,6 @@
+[
+  {
+    "id": "cancelOrderConfirmMsg.send",
+    "defaultMessage": "send to address {address}"
+  }
+]

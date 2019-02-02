@@ -1,0 +1,6 @@
+[
+  {
+    "id": "fundConfirmMsg.send",
+    "defaultMessage": "send to address {address}"
+  }
+]
