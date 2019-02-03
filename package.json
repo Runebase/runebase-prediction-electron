@@ -3,7 +3,7 @@
   "description": "RunebasePrediction Prediction Market app",
   "author": "bodhi.network",
   "license": "ISC",
-  "version": "0.1.0-c0-d3",
+  "version": "0.0.1-c0-d0",
   "repository": "git@github.com:runebase/runebase-prediction-electron.git",
   "main": "main.js",
   "keywords": [
@@ -111,11 +111,11 @@
   },
   "dependencies": {
     "axios": "^0.18.0",
-    "runebase-prediction-server": "github:runebase/runebase-prediction-server#dex-api",
     "electron-prompt": "^0.5.0",
     "express": "^4.16.3",
     "lodash": "^4.17.10",
-    "mixpanel": "^0.9.2"
+    "mixpanel": "^0.9.2",
+    "runebase-prediction-server": "github:runebase/runebase-prediction-server#dex-api"
   },
   "devDependencies": {
     "electron": "^3.0.4",
